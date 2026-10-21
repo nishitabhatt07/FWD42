@@ -11,14 +11,10 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Prevents double scrollbars across layouts */
+    overflow: hidden;
 }
-
-
-   /* 2. TOP NAVIGATION BRAND HEADER (WITH GLOWING PULSE RADAR)  */
-
 .app-header {
-    background-color: #0f172a; /* Deep charcoal slate */
+    background-color: #0f172a; 
     color: white;
     height: 65px;
     display: flex;
@@ -34,16 +30,6 @@ body {
     align-items: center;
     gap: 10px;
 }
-
-/* ⚡ The Pulse Heartbeat Neon Radar Logo Engine */
-.pulse-brand-icon {
-    height: 28px;
-    width: auto;
-    color: #00dfa2; /* Electric Mint Green / Neon Cyan highlight */
-    filter: drop-shadow(0 0 6px rgba(0, 223, 162, 0.6));
-    animation: pulseGlow 2.5s infinite ease-in-out;
-}
-
 .brand-logo {
     font-weight: 700;
     font-size: 1.25rem;
@@ -54,7 +40,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Horizontal Main Navigation Links Bar Layout */
+
 .main-horizontal-nav {
     display: flex;
     gap: 8px;
@@ -83,10 +69,10 @@ body {
     font-weight: 600;
 }
 .nav-pillar.urgent-pillar {
-    color: #f87171; /* Warning soft red string */
+    color: #f87171;
 }
 
-/* User Metadata Session Tags */
+
 .user-session {
     display: flex;
     align-items: center;
@@ -101,19 +87,6 @@ body {
     border-radius: 20px;
     font-weight: 600;
 }
-.logout-link {
-    background: none;
-    border: none;
-    color: #64748b;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-.logout-link:hover {
-    color: #ef4444;
-}
-
-/*  3. APP CONTAINER & LEFT UTILITY SIDEBAR MECHANICS */
 .layout-body {
     display: flex;
     flex-grow: 1;
@@ -157,40 +130,20 @@ body {
 }
 .sidebar-item.active {
     background-color: #f1f5f9;
-    color: #0284c7; /* Brand focusing blue tone */
+    color: #0284c7;
     font-weight: 600;
 }
 
-/* 4. DISPLAY DISPLAY-VIEWPORT WINDOWS & ANIMATION FRAMES */
+
 .display-viewport {
     flex-grow: 1;
     padding: 40px;
-    overflow-y: auto; /* Handles display content scrolling limits gracefully */
+    overflow-y: auto; 
 }
 
 .viewport-panel {
-    display: none; /* Safely mask inactive screens away */
+    display: none;
 }
-.viewport-panel.active-panel {
-    display: block; /* Fire visible configurations based on routing events */
-    animation: panelFadeTransition 0.2s ease-out;
-}
-
-.panel-header {
-    margin-bottom: 25px;
-}
-.panel-header h2 {
-    font-size: 1.4rem;
-    color: #0f172a;
-    font-weight: 700;
-}
-.panel-header p {
-    font-size: 0.9rem;
-    color: #64748b;
-    margin-top: 4px;
-}
-
-/*5. FACULTY CONTROL DESK CONSOLE*/
 .faculty-post-desk {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -234,26 +187,7 @@ body {
     resize: vertical;
     margin-bottom: 12px;
 }
-.form-row input:focus, .form-row select:focus, .faculty-post-desk textarea:focus {
-    border-color: #0284c7;
-}
 
-.btn-inject {
-    background-color: #0284c7;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-weight: 600;
-    font-size: 0.85rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-.btn-inject:hover {
-    background-color: #0369a1;
-}
-
-/* 6. CARDS, CHIPS, AND STRUCTURAL INFRASTRUCTURE */
 .content-card {
     background: white;
     border: 1px solid #e2e8f0;
@@ -273,7 +207,7 @@ body {
     line-height: 1.5;
 }
 
-/* Department Badge Tags Matrix */
+
 .dept-badge {
     font-size: 0.7rem;
     font-weight: 700;
@@ -283,41 +217,6 @@ body {
     margin-bottom: 8px;
     text-transform: uppercase;
 }
-.cs-tag { background: #e0f2fe; color: #0369a1; }
-.eco-tag { background: #f3e8ff; color: #6b21a8; }
-.general-tag { background: #e2e8f0; color: #334155; }
-
-/* Tables framework styles */
-.dashboard-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    overflow: hidden;
-    font-size: 0.9rem;
-}
-.dashboard-table th, .dashboard-table td {
-    padding: 12px 18px;
-    text-align: left;
-    border-bottom: 1px solid #e2e8f0;
-}
-.dashboard-table th {
-    background: #f8fafc;
-    color: #64748b;
-}
-.row-highlight {
-    background: #f0fdf4;
-}
-
-.status-pill {
-    font-size: 0.75rem;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-weight: 500;
-}
-.status-pill.pending { background: #fef9c3; color: #854d0e; }
-.status-pill.regular { background: #e0f2fe; color: #0369a1; }
 
 .resource-block {
     background: white;
@@ -329,177 +228,4 @@ body {
     color: #334155;
 }
 
-/* Action button units */
-.cta-button {
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 12px;
-    background-color: #0f172a;
-    color: white;
-    transition: background-color 0.2s;
-}
-.cta-button:hover { background-color: #1e293b; }
-.cta-button.accent { background-color: #10b981; color: white; }
-.cta-button.accent:hover { background-color: #059669; }
-
-/* Timeline and Evaluation Layout items */
-.quiz-card-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-.timeline-date { font-size: 0.85rem; font-weight: 600; color: #64748b; }
-.syllabus-block { background-color: #f8fafc; border-left: 3px solid #cbd5e1; padding: 10px 15px; font-size: 0.85rem; margin: 10px 0; color: #475569; border-radius: 0 4px 4px 0; line-height: 1.5; }
-
-/*7. INTERACTIVE POP-UP DIALOG OVERLAYS (MODAL WINDOWS)*/
-.quiz-modal-overlay {
-    position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(15, 23, 42, 0.6);
-    display: none; /* Managed dynamically via JavaScript engines */
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-}
-.quiz-modal-box {
-    background: white;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-    animation: modalSlideInTransition 0.2s ease-out;
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-}
-.modal-header h3 { 
-    font-size: 1.15rem; 
-    color: #0f172a;
- }
-.close-modal-btn { 
-    background: none; 
-    border: none; 
-    font-size: 1.2rem; 
-    color: #94a3b8; 
-    cursor: pointer; }
-.close-modal-btn:hover { 
-    color: #1e293b; 
-}
-.question-text { 
-    font-size: 1rem; 
-    color: #1e293b; 
-    margin-bottom: 15px; 
-    line-height: 1.5; 
-}
-.quiz-options-stack { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 8px; 
-}
-.option-btn {
-    text-align: left;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 12px 15px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.option-btn:hover { 
-    background-color: #f1f5f9; 
-    border-color: #cbd5e1; 
-}
-.quiz-feedback-box { 
-    margin-top: 15px; 
-    padding: 12px; 
-    border-radius: 6px; 
-    font-size: 0.9rem; 
-    font-weight: 600; 
-    display: none; 
-}
-
-
-   /* GLOBAL DARK MODE OVERRIDES (HIGH-FIDELITY MATRIX) */
-   
-body.dark-theme {
-    background-color: #0b0f19;
-    color: #f1f5f9;
-}
-
-body.dark-theme .utility-sidebar {
-    background-color: #111827;
-    border-right-color: #1f2937;
-}
-
-body.dark-theme .sidebar-item {
-    color: #94a3b8;
-}
-
-body.dark-theme .sidebar-item:hover, 
-body.dark-theme .sidebar-item.active {
-    background-color: #1f2937;
-    color: #38bdf8;
-}
-
-body.dark-theme .content-card,
-body.dark-theme .faculty-post-desk,
-body.dark-theme .quiz-modal-box,
-body.dark-theme .resource-block {
-    background-color: #111827;
-    border-color: #1f2937;
-    color: #f1f5f9;
-}
-
-body.dark-theme .content-card h3,
-body.dark-theme .panel-header h2,
-body.dark-theme .faculty-post-desk h3,
-body.dark-theme .modal-header h3 {
-    color: #ffffff;
-}
-
-body.dark-theme .syllabus-block {
-    background-color: #1f2937;
-    border-left-color: #4b5563;
-    color: #cbd5e1;
-}
-
-body.dark-theme .option-btn {
-    background-color: #1f2937;
-    border-color: #374151;
-    color: #cbd5e1;
-}
-body.dark-theme .option-btn:hover {
-    background-color: #374151;
-}
-
-body.dark-theme .dashboard-table {
-    background-color: #111827;
-    border-color: #1f2937;
-}
-body.dark-theme .dashboard-table th {
-    background-color: #1f2937;
-    color: #94a3b8;
-}
-body.dark-theme .dashboard-table td {
-    border-bottom-color: #1f2937;
-}
-body.dark-theme .row-highlight {
-    background-color: #064e3b;
-}
-
-body.dark-theme .faculty-post-desk input,
-body.dark-theme .faculty-post-desk select,
-body.dark-theme .faculty-post-desk textarea {
-    background-color: #1f2937;
-    border-color: #374151;
-    color: #ffffff;
 }
