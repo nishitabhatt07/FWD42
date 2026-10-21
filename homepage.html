@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SouthAsianPulse - Professional Campus Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-branding">
+            
+            <svg class="pulse-brand-icon" xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+            <div class="brand-logo">SouthAsianPulse</div>
+        </div>
+        
+        <nav class="main-horizontal-nav">
+            <button class="nav-pillar active" onclick="switchMainPillar('home')">🏠 Campus Pulse</button>
+            <button class="nav-pillar urgent-pillar" onclick="switchMainPillar('urgent')">🚨 Urgent</button>
+            <button class="nav-pillar" onclick="switchMainPillar('calendar')">📅 Calendar</button>
+            <button class="nav-pillar" onclick="switchMainPillar('faculty')">🎓 Faculty</button>
+        </nav>
+
+        <div class="user-session">
+            
+            <button class="nav-pillar" onclick="toggleTheme()" style="padding: 5px 10px; font-size: 1.1rem; line-height:1;">🌓</button>
+            <span id="profileBadge" class="user-tag">Loading...</span>
+            <button class="logout-link" onclick="logout()">Log Out</button>
+        </div>
+    </header>
+
+    
+    <div class="layout-body">
+        
+        <aside class="utility-sidebar">
+            <div class="sidebar-heading">Academic Modules</div>
+            <button class="sidebar-item" onclick="switchSidebarItem('quiz')">📝 Assessment Terminal</button>
+            <button class="sidebar-item" onclick="switchSidebarItem('placement')">💼 Career Hub</button>
+            <button class="sidebar-item" onclick="switchSidebarItem('resources')">📚 Knowledge Vault</button>
+            <button class="sidebar-item" onclick="switchSidebarItem('hackathon')">🚀 Innovation</button>
+        </aside>
+
+       
+        <main class="display-viewport">
+
+           
+            <div id="panel-home" class="viewport-panel active-panel">
+                <div class="panel-header">
+                    <h2>🏠 Central Campus Stream</h2>
+                    <p>View announcements and test the Faculty Injection Desk below.</p>
+                </div>
+
+                <div class="faculty-post-desk">
+                    <h3>🎓 Faculty Bulletin Control Desk</h3>
+                    <p class="desk-sub">Test typing and dynamically injecting a live announcement card below:</p>
+                    <form id="facultyNoticeForm" onsubmit="injectFacultyNotice(event)">
+                        <div class="form-row">
+                            <input type="text" id="noticeTitle" placeholder="Notice Headline (e.g., Lab Postponement)" required>
+                            <select id="noticeDept">
+                                <option value="all">Broadcast to All</option>
+                                <option value="cs">Computer Science Only</option>
+                                <option value="eco">Economics Only</option>
+                            </select>
+                        </div>
+                        <textarea id="noticeBody" rows="2" placeholder="Type notice description here..." required></textarea>
+                        <button type="submit" class="btn-inject">🚀 Inject Live Notice</button>
+                    </form>
+                </div>
+                <div id="liveNoticeContainer">
+                    <div class="content-card dept-all">
+                        <span class="dept-badge general-tag">General</span>
+                        <h3>Welcome to SouthAsianPulse</h3>
+                        <p>Select tabs from the navigation bar above or sidebar modules to view your personalized layout maps.</p>
+                    </div>
+                    <div class="content-card dept-cs">
+                        <span class="dept-badge cs-tag">Computer Science</span>
+                        <h3>System Architecture Lab Update</h3>
+                        <p>The FLS Cloud Compute Laboratory will undergo software maintenance this Friday morning.</p>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div id="panel-urgent" class="viewport-panel">
+                <div class="panel-header"><h2>🚨 Urgent Bulletins</h2></div>
+                <div class="alert-banner-red">
+                    <strong>Administrative Notice:</strong> Due to continuous weather conditions, all internal assessments will migrate online.
+                </div>
+            </div>
+
+           
+            <div id="panel-calendar" class="viewport-panel">
+                <div class="panel-header"><h2>📅 Academic Calendar 2026</h2></div>
+                <table class="dashboard-table">
+                    <thead><tr><th>Event Title</th><th>Date</th><th>Status</th></tr></thead>
+                    <tbody>
+                        <tr class="row-highlight"><td>Dussehra Break Windows</td><td>October 20</td><td><span class="status-pill pending">Upcoming</span></td></tr>
+                        <tr><td>SAARC Charter Integration Accord</td><td>December 08</td><td><span class="status-pill regular">Scheduled</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            <div id="panel-faculty" class="viewport-panel">
+                <div class="panel-header"><h2>🎓 Departmental Faculty Registry</h2></div>
+                <div class="content-card dept-cs">
+                    <h4>Dr. Amit Kumar</h4>
+                    <p>Senior Professor, Deep Systems Engineering</p>
+                </div>
+                <div class="content-card dept-eco">
+                    <h4>Prof. Priya Sharma</h4>
+                    <p>Chairperson, Quantitative Trade Policy</p>
+                </div>
+            </div>
+
+          
+            <div id="panel-quiz" class="viewport-panel">
+                <div class="panel-header">
+                    <h2>📝 Assessment Terminal & Internal Evaluation Tracker</h2>
+                    <p>Track evaluation schedules, mid-sem scopes, and practice mock variables.</p>
+                </div>
+                <div class="quiz-schedule-container">
+                    <div class="content-card dept-cs">
+                        <div class="quiz-card-meta">
+                            <span class="dept-badge cs-tag">Computer Science</span>
+                            <span class="timeline-date">🗓️ Target: Oct 14, 2026</span>
+                        </div>
+                        <h3>Data Structures - Mid-Sem Evaluation Tracker</h3>
+                        <div class="syllabus-block">
+                            <strong>Syllabus Scope:</strong> Balanced Trees (AVL, Red-Black), Graphs, and Matrix Routing Algorithms.
+                        </div>
+                        
+                       
+                        <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+                            <button class="cta-button" onclick="openMockQuizModal()" style="margin-top: 0;">📝 Launch Practice Session</button>
+                            
+                            <button class="cta-button" onclick="openGoogleCalendarLink('Data Structures Mid-Sem', 'FLS Compute Lab')" style="background-color: #0284c7; margin-top: 0;">📅 Add to Google Calendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="quizModal" class="quiz-modal-overlay">
+                    <div class="quiz-modal-box">
+                        <div class="modal-header"><h3>Data Structures Practice Session</h3><button class="close-modal-btn" onclick="closeMockQuizModal()">✕</button></div>
+                        <p class="question-text"><strong>Question:</strong> What is the worst-case time complexity of searching for an element in a balanced Binary Search Tree (AVL)?</p>
+                        <div class="quiz-options-stack">
+                            <button class="option-btn" onclick="checkMockAnswer(this, false)">O(1)</button>
+                            <button class="option-btn" onclick="checkMockAnswer(this, true)">O(log n)</button>
+                            <button class="option-btn" onclick="checkMockAnswer(this, false)">O(n)</button>
+                        </div>
+                        <div id="quizFeedback" class="quiz-feedback-box"></div>
+                    </div>
+                </div>
+            </div>
+
+               
+                <div id="quizModal" class="quiz-modal-overlay">
+                    <div class="quiz-modal-box">
+                        <div class="modal-header"><h3>Data Structures Practice Session</h3><button class="close-modal-btn" onclick="closeMockQuizModal()">✕</button></div>
+                        <p class="question-text"><strong>Question:</strong> What is the worst-case time complexity of searching for an element in a balanced Binary Search Tree (AVL)?</p>
+                        <div class="quiz-options-stack">
+                            <button class="option-btn" onclick="checkMockAnswer(this, false)">O(1)</button>
+                            <button class="option-btn" onclick="checkMockAnswer(this, true)">O(log n)</button>
+                            <button class="option-btn" onclick="checkMockAnswer(this, false)">O(n)</button>
+                        </div>
+                        <div id="quizFeedback" class="quiz-feedback-box"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="panel-placement" class="viewport-panel">
+                <div class="panel-header"><h2>💼 Career Hub Operations & Openings</h2></div>
+                <div class="content-card dept-eco">
+                    <span class="dept-badge eco-tag">Economics</span>
+                    <h3>Reserve Bank Financial Analyst Openings</h3>
+                    <p>Hiring cycle window updates for matching master candidates. Portfolios must be logged before closing hours.</p>
+                    <button class="cta-button">Submit Portfolio File</button>
+                </div>
+            </div>
+
+           
+            <div id="panel-resources" class="viewport-panel">
+                <div class="panel-header"><h2>📚 Knowledge Vault Resource Cache</h2></div>
+                <div class="resource-block">📘 Distributed Systems Reference Blueprint.pdf</div>
+            </div>
+
+          
+            <div id="panel-hackathon" class="viewport-panel">
+                <div class="panel-header"><h2>🚀 Innovation Lab Timeline & Challenges</h2></div>
+                <div class="content-card dept-all">
+                    <span class="dept-badge general-tag">All Depts</span>
+                    <h3>Smart South-Asia Hackathon 2026</h3>
+                    <p>Registration arrays remain open for registered university scholars till early next month.</p>
+                    <button class="cta-button accent">Register Coding Team</button>
+                </div>
+            </div>
+
+        </main> 
+    </div> 
+  
+</body>
+</html>
