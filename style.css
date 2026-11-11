@@ -1,0 +1,326 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f6fb;
+    min-height:100vh;
+    transition:.3s;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:linear-gradient(
+        180deg,
+        #667eea,
+        #764ba2
+    );
+    padding:20px;
+    color:white;
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo h2{
+    font-size:28px;
+}
+
+.logo p{
+    font-size:14px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    margin:10px 0;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar a:hover{
+    background:rgba(255,255,255,.15);
+}
+
+.sidebar i{
+    margin-right:10px;
+}
+
+/* MAIN */
+
+.main{
+    margin-left:250px;
+    flex:1;
+    padding:25px;
+}
+
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+/* ICONS */
+
+.icon-btn{
+    position:relative;
+    text-decoration:none;
+    color:#333;
+    font-size:24px;
+}
+
+.notification-count{
+    position:absolute;
+    top:-8px;
+    right:-8px;
+
+    width:20px;
+    height:20px;
+
+    border-radius:50%;
+
+    background:red;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:11px;
+    font-weight:bold;
+}
+
+.dark-btn{
+    border:none;
+    background:#667eea;
+    color:white;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    margin-bottom:25px;
+}
+
+.hero h2{
+    margin-bottom:10px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.card h3{
+    color:#667eea;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+}
+
+/* DARK MODE */
+
+.dark{
+    background:#1f2937;
+}
+
+.dark .main{
+    color:white;
+}
+
+.dark .card{
+    background:#2a3448;
+    color:white;
+}
+
+.dark .card h3{
+    color:#9cb5ff;
+}
+
+.dark .card p{
+    color:#d1d5db;
+}
+
+.dark .icon-btn{
+    color:white;
+}
+
+.dark .hero{
+    background:linear-gradient(
+        135deg,
+        #263449,
+        #384d6b
+    );
+}
+
+.dark .dark-btn{
+    background:#384d6b;
+}
+
+.dark .notification-count{
+    border:2px solid #2a3448;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .header{
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        width:200px;
+    }
+
+    .main{
+        margin-left:200px;
+        padding:15px;
+    }
+}
+
+@media(max-width:600px){
+
+    body{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+
+    .main{
+        margin-left:0;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+}
+.notification-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:20px;
+
+    margin-top:20px;
+}
+
+.notification-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+}
+
+.notification-card h3{
+
+    margin-bottom:15px;
+}
+
+.high{
+
+    border-left:6px solid red;
+}
+
+.academic{
+
+    border-left:6px solid #667eea;
+}
+
+.placement{
+
+    border-left:6px solid green;
+}
+
+/* Dark Mode */
+
+.dark .notification-card{
+
+    background:#2a3448;
+
+    color:white;
+}
