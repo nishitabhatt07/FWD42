@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Calendar 2026–27 | SouthAsianPulse</title>
+    <link rel="stylesheet" href="../css/style.css?v=3">
+    <link rel="stylesheet" href="../css/calendar.css?v=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar" aria-label="Academic calendar navigation">
+        <div class="logo">
+            <h2>SAU</h2>
+            <p>SouthAsianPulse</p>
+        </div>
+        <a id="calendar-dashboard-link" href="university-dashboard.html">
+            <i class="fas fa-home"></i>
+            Dashboard
+        </a>
+        <a href="../index.html">
+            <i class="fas fa-arrow-left"></i>
+            Back
+        </a>
+    </nav>
+
+    <main class="main">
+        <header class="header">
+            <h1><i class="fas fa-calendar-alt" aria-hidden="true"></i> Academic Calendar</h1>
+            <button id="modeBtn" class="dark-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+        </header>
+
+        <section class="hero">
+            <h2>Academic Schedule 2026–27</h2>
+            <p>Browse month by month. Dots mark scheduled dates; select a marked day to see its label and details.</p>
+        </section>
+
+        <section class="academic-calendar-card" aria-labelledby="calendar-month-label">
+            <div class="calendar-toolbar">
+                <button id="previous-month" class="calendar-nav-button" type="button" aria-label="Previous month">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <h2 id="calendar-month-label" aria-live="polite"></h2>
+                <button id="next-month" class="calendar-nav-button" type="button" aria-label="Next month">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="calendar-weekdays" aria-hidden="true">
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+            </div>
+            <div id="academic-calendar-grid" class="calendar-grid" role="group" aria-labelledby="calendar-month-label"></div>
+
+            <ul class="calendar-legend" aria-label="Calendar categories">
+                <li><span class="calendar-dot calendar-dot--session" aria-hidden="true"></span> Academic session</li>
+                <li><span class="calendar-dot calendar-dot--examination" aria-hidden="true"></span> Examinations</li>
+                <li><span class="calendar-dot calendar-dot--deadline" aria-hidden="true"></span> Grade deadlines</li>
+                <li><span class="calendar-dot calendar-dot--vacation" aria-hidden="true"></span> Vacation</li>
+            </ul>
+        </section>
+
+        <section class="calendar-agenda-section" aria-labelledby="calendar-agenda-title">
+            <h2 id="calendar-agenda-title" class="updates-section-title">Schedule this month</h2>
+            <div id="calendar-agenda" class="calendar-agenda" aria-live="polite"></div>
+        </section>
+
+        <section class="calendar-selected-section" aria-labelledby="selected-day-title" aria-live="polite">
+            <h2 id="selected-day-title" class="updates-section-title">Selected date</h2>
+            <div id="selected-day-details" class="selected-day-details"></div>
+        </section>
+
+        <p class="updates-note">Dates and labels are transcribed from the academic schedule provided. Check university announcements for any revisions.</p>
+        <noscript><p class="updates-note">Enable JavaScript to browse the interactive academic calendar.</p></noscript>
+    </main>
+    <script src="../js/script.js?v=6"></script>
+    <script src="../js/calendar.js?v=1"></script>
+</body>
+</html>

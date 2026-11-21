@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Scholarships | SouthAsianPulse</title>
+    <link rel="stylesheet" href="../css/style.css?v=3">
+    <link rel="stylesheet" href="../css/scholarships.css?v=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-dashboard-context="university">
+    <nav class="sidebar" aria-label="University navigation">
+        <div class="logo">
+            <h2>SAU</h2>
+            <p>SouthAsianPulse</p>
+        </div>
+        <a href="university-dashboard.html"><i class="fas fa-university"></i> University</a>
+        <a href="university-dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="quiz.html"><i class="fas fa-book"></i> Quizzes</a>
+        <a href="faculty.html"><i class="fas fa-user-tie"></i> Faculty</a>
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Back</a>
+    </nav>
+
+    <main class="main">
+        <header class="header">
+            <h1>University Scholarships</h1>
+            <div class="header-actions">
+                <a href="university-updates.html" class="icon-btn" aria-label="University updates">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">4</span>
+                </a>
+                <a href="academic-calendar.html?dashboard=university" class="icon-btn" aria-label="Academic calendar" title="Academic calendar">
+                    <i class="fas fa-calendar-alt"></i>
+                </a>
+                <button id="modeBtn" class="dark-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h2>Find a support category</h2>
+            <p>Enter a few student details, then browse the scholarship examples below.</p>
+        </section>
+
+        <section class="scholarship-form-card" aria-labelledby="student-details-title">
+            <h2 id="student-details-title">Student information</h2>
+            <form id="scholarship-form">
+                <div class="scholarship-form-grid">
+                    <div class="scholarship-field">
+                        <label for="student-name">Full name</label>
+                        <input id="student-name" name="student-name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="scholarship-field">
+                        <label for="student-id">Student ID</label>
+                        <input id="student-id" name="student-id" type="text" required>
+                    </div>
+                    <div class="scholarship-field">
+                        <label for="student-email">University email</label>
+                        <input id="student-email" name="student-email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="scholarship-field">
+                        <label for="student-programme">Programme level</label>
+                        <select id="student-programme" name="student-programme" required>
+                            <option value="">Select a programme level</option>
+                            <option>Undergraduate</option>
+                            <option>Postgraduate</option>
+                            <option>PhD</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="scholarship-field scholarship-field-wide">
+                        <label for="scholarship-interest">Scholarship interest</label>
+                        <select id="scholarship-interest" name="scholarship-interest" required>
+                            <option value="">Select a category</option>
+                            <option>Merit-based support</option>
+                            <option>Need-based assistance</option>
+                            <option>Regional student support</option>
+                            <option>Research and innovation</option>
+                            <option>Emergency assistance</option>
+                            <option>Women in STEM</option>
+                            <option>Conference and travel support</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="scholarship-form-actions">
+                    <button id="save-student-details" class="dark-btn" type="button">Save details (demo)</button>
+                    <p id="scholarship-form-message" class="scholarship-form-message" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+            <p class="scholarship-privacy-note">Demo form only. Details are not saved or sent to the university.</p>
+        </section>
+
+        <section aria-labelledby="scholarship-categories-title">
+            <h2 class="updates-section-title" id="scholarship-categories-title">Scholarship categories</h2>
+            <div class="scholarship-grid">
+                <article class="scholarship-card">
+                    <span class="scholarship-tag">Example category</span>
+                    <h3>Merit-based support</h3>
+                    <p>An illustrative category for students with strong academic performance.</p>
+                </article>
+                <article class="scholarship-card">
+                    <span class="scholarship-tag">Example category</span>
+                    <h3>Need-based assistance</h3>
+                    <p>An illustrative category for students seeking financial support to continue their studies.</p>
+                </article>
+                <article class="scholarship-card">
+                    <span class="scholarship-tag">Example category</span>
+                    <h3>Regional student support</h3>
+                    <p>An illustrative category for assistance connected with students from across South Asia.</p>
+                </article>
+                <article class="scholarship-card">
+                    <span class="scholarship-tag">Example category</span>
+                    <h3>Research and innovation</h3>
+                    <p>An illustrative category for student research, academic projects, or prototypes.</p>
+                </article>
+                <article class="scholarship-card">
+                    <span class="scholarship-tag">Example category</span>
+                    <h3>Emergency assistance</h3>
+                    <p>An illustrative category for students experiencing unexpected financial hardship.</p>
+                </article>
+                <article class="scholarship-card">
+                    <span class="scholarship-tag">Example category</span>
+                    <h3>Women in STEM</h3>
+                    <p>An illustrative category for supporting women pursuing science, technology, engineering, or mathematics.</p>
+                </article>
+                <article class="scholarship-card">
+                    <span class="scholarship-tag">Example category</span>
+                    <h3>Conference and travel support</h3>
+                    <p>An illustrative category for participation in academic conferences or research events.</p>
+                </article>
+            </div>
+        </section>
+
+        <p class="updates-note">These are sample categories for the dashboard design, not confirmed or currently open SAU awards. Verify actual scholarships, eligibility, amounts, and deadlines with <a href="https://admissions.sau.int/" target="_blank" rel="noopener noreferrer">SAU’s official admissions portal</a>.</p>
+    </main>
+    <script src="../js/script.js?v=6"></script>
+    <script src="../js/scholarships.js?v=1"></script>
+</body>
+</html>
