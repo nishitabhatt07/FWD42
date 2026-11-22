@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Notices | SouthAsianPulse</title>
+    <link rel="stylesheet" href="../css/style.css?v=3">
+    <link rel="stylesheet" href="../css/notification.css?v=3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar" aria-label="University navigation">
+        <div class="logo">
+            <h2>SAU</h2>
+            <p>SouthAsianPulse</p>
+        </div>
+        <a href="university-dashboard.html"><i class="fas fa-university"></i> University</a>
+        <a href="university-dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="quiz.html"><i class="fas fa-book"></i> Quizzes</a>
+        <a href="faculty.html"><i class="fas fa-user-tie"></i> Faculty</a>
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Back</a>
+    </nav>
+
+    <main class="main">
+        <header class="header">
+            <h1>University Notices</h1>
+            <div class="header-actions">
+                <a href="university-updates.html" class="icon-btn" aria-label="University updates">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">4</span>
+                </a>
+                <a href="academic-calendar.html?dashboard=university" class="icon-btn" aria-label="Academic calendar" title="Academic calendar">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="notification-count">3</span>
+                </a>
+                <button id="modeBtn" class="dark-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h2>South Asian University</h2>
+            <p>University-wide announcements and student information. For the shared news and events view, open <a href="university-updates.html">University Updates</a>.</p>
+        </section>
+
+        <section aria-labelledby="official-notices-title">
+            <h2 class="updates-section-title" id="official-notices-title">Official notices</h2>
+            <div class="notification-grid">
+                <article class="notification-card academic">
+                    <h3>2026–27 undergraduate admission notices</h3>
+                    <p>SAU’s official notice archive lists undergraduate spot-round and admission updates. Check the source for programme-specific availability and current status.</p>
+                    <p><a href="https://admissions.sau.int/notifications-2026/" target="_blank" rel="noopener noreferrer">SAU Admissions Notices</a></p>
+                </article>
+                <article class="notification-card">
+                    <h3>Continuing-student registration</h3>
+                    <p>SAU published a registration notice for continuing students on 23 July 2026. Refer to the official notice for instructions and verify whether a current registration window is open.</p>
+                    <p><a href="https://admissions.sau.int/notifications/re-registration-for-continuing-students/" target="_blank" rel="noopener noreferrer">Official registration notice</a></p>
+                </article>
+                <article class="notification-card placement">
+                    <h3>Hostel registration · 2026–27</h3>
+                    <p>The official admissions portal published updated hostel registration lists for the 2026–27 academic year. Check the portal for the latest list and student-services contact details.</p>
+                    <p><a href="https://admissions.sau.int/notifications/sau-hostel-registrations-2026-27-entrance-mode-fourth-list-direct-mode-third-list/" target="_blank" rel="noopener noreferrer">Official hostel registration notice</a></p>
+                </article>
+                <article class="notification-card high" id="scholarships">
+                    <h3>Scholarships and financial support</h3>
+                    <p>For current funding options, eligibility, and application dates, consult SAU’s official student and admissions channels. This dashboard does not imply that a specific award is currently open.</p>
+                    <p><a href="https://admissions.sau.int/" target="_blank" rel="noopener noreferrer">Visit SAU Admissions</a></p>
+                </article>
+            </div>
+        </section>
+
+        <p class="updates-note">These entries summarize public SAU notices and are not a live feed. Confirm current deadlines, eligibility, and availability with the linked official source.</p>
+    </main>
+    <script src="../js/script.js?v=6"></script>
+</body>
+</html>

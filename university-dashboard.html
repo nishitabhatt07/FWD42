@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Dashboard | SouthAsianPulse</title>
+    <link rel="stylesheet" href="../css/style.css?v=3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-dashboard-context="university">
+    <nav class="sidebar" aria-label="University navigation">
+        <div class="logo">
+            <h2>SAU</h2>
+            <p>SouthAsianPulse</p>
+        </div>
+        <a href="university-dashboard.html" aria-current="page"><i class="fas fa-university"></i> University</a>
+        <a href="university-dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="quiz.html"><i class="fas fa-book"></i> Quizzes</a>
+        <a href="faculty.html"><i class="fas fa-user-tie"></i> Faculty</a>
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Back</a>
+    </nav>
+
+    <main class="main">
+        <header class="header">
+            <h1><i class="fas fa-university" aria-hidden="true"></i> University Dashboard</h1>
+            <div class="header-actions">
+                <a href="university-updates.html" class="icon-btn" aria-label="University updates">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">4</span>
+                </a>
+                <a href="academic-calendar.html?dashboard=university" class="icon-btn" aria-label="Academic calendar" title="Academic calendar">
+                    <i class="fas fa-calendar-alt"></i>
+                </a>
+                <button id="modeBtn" class="dark-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h2>Campus Highlights</h2>
+            <p>Explore academic updates, scholarships, campus announcements, and university-wide opportunities.</p>
+        </section>
+
+        <section class="cards" aria-label="Campus highlights">
+            <a class="card card-link" href="university-notices.html">
+                <h3>📢 Notices</h3>
+                <p>Read university-wide announcements and student information.</p>
+            </a>
+            <a class="card card-link" href="university-scholarships.html">
+                <h3>🎓 Scholarships</h3>
+                <p>Find official links for current funding and financial-support information.</p>
+            </a>
+            <a class="card card-link" href="university-updates.html#upcoming-events">
+                <h3>🏆 Events</h3>
+                <p>Stay updated on conferences, campus events, and competitions.</p>
+            </a>
+            <a class="card card-link" href="placement.html">
+                <h3>🤝 Opportunities</h3>
+                <p>Discover internship, research, and institution-wide collaborations.</p>
+            </a>
+        </section>
+    </main>
+    <script src="../js/script.js?v=6"></script>
+</body>
+</html>
